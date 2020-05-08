@@ -1,6 +1,6 @@
-using mopkg
-using Test
+using mopkg, Test
 
-@testset "mopkg.jl" begin
-    # Write your own tests here.
+@testset "bisection" begin
+    @test bisection(x->x^2-2, 0, 2) == 1.4142074584960938
+    @test bisection(x->x+5, -10, 100) == -4.999998211860657
 end
